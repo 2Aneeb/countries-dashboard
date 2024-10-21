@@ -1,66 +1,83 @@
 import React from "react";
 import { useState, useEffect } from "react";
 
-//lang, name, iso/tld
 function CountryTable({list}) {
-    const [filteredList, setfilteredList] = useState([])
-    const [searchInput, setsearchInput] = useState(false)
-    const [continents, setContinents] = useState([])
-  
+    const [filteredList, setFilteredList] = useState([]);
+    const [searchInput, setSearchInput] = useState('');
+    const [continentsInput, setContinentsInput] = useState([]);
+      
+    useEffect(() => {
+        const filterCountries = () => {
+            let filtered = list;
 
-    const searchItems = (input) => {
-        setsearchInput(true)
-        if (input.length === 0) {
-            setfilteredList(list)
-        } else {
-            setfilteredList(
-                list.filter(country => 
-                    country.name.common.toLowerCase().includes(input.toLowerCase()) ||
-                    (country.languages && Object.values(country.languages).some(lang => lang.toLowerCase().includes(input.toLowerCase()))) ||
-                    (country.cca2 && country.cca2.toLowerCase().includes(input.toLowerCase()))
-                )
-            );
-        }
+            if (searchInput.length > 0) {
+                filtered = filtered.filter(country =>
+                    country.name.common.toLowerCase().includes(searchInput.toLowerCase()) ||
+                    (country.languages && Object.values(country.languages).some(lang => lang.toLowerCase().includes(searchInput.toLowerCase()))) ||
+                    (country.cca2 && country.cca2.toLowerCase().includes(searchInput.toLowerCase()))
+                );
+            }
 
-        
-    }
-    console.log(filteredList)
-    
+            if (continentsInput.length > 0) {
+                filtered = filtered.filter(country =>
+                    country.continents && continentsInput.some(continent => country.continents.includes(continent))
+                );
+            }
+
+            setFilteredList(filtered);
+        };
+
+        filterCountries();
+    }, [searchInput, continentsInput, list])
+
+    const handleChecked = (event) => {
+        const tag = event.target.id;
+        setContinentsInput(prevState => {
+            if (prevState.includes(tag)) {
+                return prevState.filter(continent => continent !== tag); 
+            } else {
+                return [...prevState, tag]; 
+            }
+        });
+    };
+
+ 
     return (
         <div className="countryTableDiv">
             <div className="filtersContainer">
                 <input className="search"
                 type="text"
                 placeholder="Search..."
-                onChange={(inputString) => searchItems(inputString.target.value)}
+                onChange={(inputString) => setSearchInput(inputString.target.value)}
                 />
                 {/*create continents array and use map() maybe*/}
-                <input type="checkbox" id='Asia'/>
+                <input type="checkbox" id='Asia' onChange={handleChecked}/>
                 <label htmlFor="Asia">Asia</label>
                 
-                <input type="checkbox" id='NorthAmerica'/>
-                <label htmlFor="NorthAmerica">North America</label>
+                <input type="checkbox" id='North America' onChange={handleChecked}/>
+                <label htmlFor="North America">North America</label>
                 
-                <input type="checkbox" id='SouthAmerica'/>
-                <label htmlFor="SouthAmerica">South America</label>
+                <input type="checkbox" id='South America' onChange={handleChecked}/>
+                <label htmlFor="South America">South America</label>
                 
-                <input type="checkbox" id='Europe'/>
+                <input type="checkbox" id='Europe' onChange={handleChecked}/>
                 <label htmlFor="Europe">Europe</label>
                 
-                <input type="checkbox" id='Oceania'/>
+                <input type="checkbox" id='Oceania'onChange={handleChecked}/>
                 <label htmlFor="Oceania">Australia (Oceania)</label>
                 
-                <input type="checkbox" id='Africa'/>
+                <input type="checkbox" id='Africa'onChange={handleChecked}/>
                 <label htmlFor="Africa">Africa</label>
 
-                <input type="checkbox" id='Antarctica'/>
+                <input type="checkbox" id='Antarctica'onChange={handleChecked}/>
                 <label htmlFor="Antarctica">Antarctica</label>
-
+                
+                {/*
                 <input type="checkbox" name="" id="Landlocked" />
                 <label htmlFor="Landlocked">Landlocked</label>
         
                 
-                {/* <label htmlFor="timezone">Time Zone</label>
+               <label htmlFor="timezone">Time Zone</label>
                 <select name="timezone" id="timezone">
                         <option value="">UTC-1</option>
                         <option value="">UTC-1</option>
@@ -90,7 +107,7 @@ function CountryTable({list}) {
 
                 </thead>
                 <tbody>
-                    {searchInput ? filteredList.map((country) => (
+                    {filteredList.length > 0 ? filteredList.map((country) => (
                         <tr key={country.cca2}>
                             <td> {country.name.common}</td>
                             <td className="table-cell"> {country.name.official}</td>

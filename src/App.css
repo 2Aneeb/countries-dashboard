@@ -15,7 +15,8 @@ body {
 .countryInfo div {
   margin: 0%;
   margin-right: 15px;
-  padding: 10px;
+  padding: 10px 20px;
+  line-height: 2em;
   border-radius: 8px;
   background-color: black;
   min-width: 200px;
@@ -41,7 +42,7 @@ body {
   width: 1400px;
   text-align: left;
   background-color: black;
-  padding: 10px 15px;
+  padding: 15px 15px;
   border-radius: 8px;
 }
 

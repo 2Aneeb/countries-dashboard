@@ -2,9 +2,9 @@
 
 Submitted by: **Aneeb Zulfiqar**
 
-This web app: **insert description**
+This web app: **Search information about countries around the world**
 
-Time spent: **8** hours spent in total
+Time spent: **10** hours spent in total
 
 ## Required Features
 
@@ -13,21 +13,21 @@ The following **required** functionality is completed:
 - [X] **The list displays a list of data fetched using an API call**
 - [X] **Data uses the useEffect React hook and async/await syntax**
 - [X] **The app dashboard includes at least three summary statistics about the data such as**
-  - [X] Country name and capital
-  - [X] Country continent, population and currencies
-  - [X] Country flag
+  - [X] Total countries, total landlocked and english speaking countries
+  - [X] Average populations
+  - [X] Highest/lowest populations
 - [X] **A search bar allows the user to search for an item in the fetched data**
-- [ ] **Multiple different filters (2+) allow the user to filter items in the database by specified categories**
+- [X] **Multiple different filters (2+) allow the user to filter items in the database by specified categories**
 
 The following **optional** features are implemented:
 
-- [ ] Multiple filters can be applied simultaneously
+- [X] Multiple filters can be applied simultaneously
 - [X] Filters use different input types such as a text input, a selection, or a slider
-- [ ] The user can enter specific bounds for filter values
+- [X] The user can enter specific bounds for filter values
 
 The following **additional** features are implemented:
 
-* [ ] List anything else that you added to improve the site's functionality!
+* [X] A random country's flag is shown.
 
 ## Video Walkthrough
 
@@ -36,7 +36,7 @@ Here's a walkthrough of implemented user stories:
 <img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
-GIF created with ...  
+GIF created with 
 <!-- Recommended tools:
 [Kap](https://getkap.co/) for macOS
 [ScreenToGif](https://www.screentogif.com/) for Windows
@@ -44,11 +44,11 @@ GIF created with ...
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+- Filtering with continent names
 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright 2024 Aneeb Zulfiqar
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
