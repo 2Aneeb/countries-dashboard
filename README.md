@@ -4,7 +4,7 @@ Submitted by: **Aneeb Zulfiqar**
 
 This web app: **insert description**
 
-Time spent: **2** hours spent in total
+Time spent: **7** hours spent in total
 
 ## Required Features
 

@@ -1,6 +1,57 @@
-
-
-ul {
-  list-style: none;
+body {
+  text-align: center;
+  padding: 1%;
 
 }
+
+
+.countryInfo {
+  display: flex;
+  font-size: larger;
+  margin: 0%;
+  margin-bottom: 15px;
+}
+
+.countryInfo div {
+  margin: 0%;
+  margin-right: 15px;
+  background-color: black;
+}
+
+.countryTableDiv {
+  overflow-y: scroll;
+  height: 800px;
+  width: 1500px;
+  text-align: left;
+}
+
+.filtersContainer {
+  padding-bottom: 15px; 
+}
+
+.filtersContainer input{
+  margin-left: 50px; 
+}
+
+.filtersContainer label {
+  margin-left: 5px; 
+}
+
+.filtersContainer .search {
+  margin-left: 0px; 
+}
+
+.countryTable td {
+  max-width: 222px; 
+  /*padding: 5px;*/
+}
+
+.countryTable tr {
+  cursor: pointer;
+  
+}
+
+
+
+
+
