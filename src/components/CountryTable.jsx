@@ -17,7 +17,7 @@ function CountryTable({list}) {
                 list.filter(country => 
                     country.name.common.toLowerCase().includes(input.toLowerCase()) ||
                     (country.languages && Object.values(country.languages).some(lang => lang.toLowerCase().includes(input.toLowerCase()))) ||
-                    (country.tld && country.tld[0].toLowerCase().includes(input.toLowerCase()))
+                    (country.cca2 && country.cca2.toLowerCase().includes(input.toLowerCase()))
                 )
             );
         }
@@ -53,6 +53,9 @@ function CountryTable({list}) {
                 <input type="checkbox" id='Africa'/>
                 <label htmlFor="Africa">Africa</label>
 
+                <input type="checkbox" id='Antarctica'/>
+                <label htmlFor="Antarctica">Antarctica</label>
+
                 <input type="checkbox" name="" id="Landlocked" />
                 <label htmlFor="Landlocked">Landlocked</label>
         
@@ -77,7 +80,7 @@ function CountryTable({list}) {
                         <th>Population</th>
                         {/*<th>Lat/Long</th>*/}
                         <th>ISO Code</th>
-                        <th>TLD</th>
+                        {/*<th>TLD</th>*/}
                         <th>Landlocked</th>
                         {/*<th>Borders</th>*/}
                         <th>Langages</th>
@@ -96,7 +99,7 @@ function CountryTable({list}) {
                             <td> {country.population.toLocaleString()}</td>
                             {/*<td> {country.latlng.join(', ')}</td>*/}
                             <td> {country.cca2}</td>
-                            <td> {country.tld[0]}</td>
+                            {/*<td> {country.tld}</td>*/}
                             <td> {country.landlocked ? 'Yes' : 'No'}</td>
                             {/*<td> {country.borders}</td>*/}
                             <td> {country.languages ? Object.values(country.languages).join(', ') : 'N/A'}</td>
@@ -112,7 +115,7 @@ function CountryTable({list}) {
                             <td> {country.population.toLocaleString()}</td>
                             {/*<td> {country.latlng.join(', ')}</td>*/}
                             <td> {country.cca2}</td>
-                            <td> {country.tld[0]}</td>
+                            {/*<td> {country.tld}</td>*/}
                             <td> {country.landlocked ? 'Yes' : 'No'}</td>
                             {/*<td> {country.borders}</td>*/}
                             <td> {country.languages ? Object.values(country.languages).join(', ') : 'N/A'}</td>

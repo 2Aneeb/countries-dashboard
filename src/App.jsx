@@ -13,7 +13,7 @@ function App() {
 
   useEffect(() => {
     const fetchCountriesData = async () => {
-      const response = await fetch(API_URL_ASIA);
+      const response = await fetch(API_URL);
       const json = await response.json();
       const filterI = json.filter(country => country.name.common !== 'Israel');
       setList(filterI);

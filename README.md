@@ -4,7 +4,7 @@ Submitted by: **Aneeb Zulfiqar**
 
 This web app: **insert description**
 
-Time spent: **7** hours spent in total
+Time spent: **8** hours spent in total
 
 ## Required Features
 
@@ -12,15 +12,17 @@ The following **required** functionality is completed:
 
 - [X] **The list displays a list of data fetched using an API call**
 - [X] **Data uses the useEffect React hook and async/await syntax**
-- [ ] **The app dashboard includes at least three summary statistics about the data such as**
-  - [ ] *insert details*
-- [ ] **A search bar allows the user to search for an item in the fetched data**
+- [X] **The app dashboard includes at least three summary statistics about the data such as**
+  - [X] Country name and capital
+  - [X] Country continent, population and currencies
+  - [X] Country flag
+- [X] **A search bar allows the user to search for an item in the fetched data**
 - [ ] **Multiple different filters (2+) allow the user to filter items in the database by specified categories**
 
 The following **optional** features are implemented:
 
 - [ ] Multiple filters can be applied simultaneously
-- [ ] Filters use different input types such as a text input, a selection, or a slider
+- [X] Filters use different input types such as a text input, a selection, or a slider
 - [ ] The user can enter specific bounds for filter values
 
 The following **additional** features are implemented:

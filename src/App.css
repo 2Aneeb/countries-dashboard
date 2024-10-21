@@ -8,21 +8,41 @@ body {
 .countryInfo {
   display: flex;
   font-size: larger;
-  margin: 0%;
+  margin-top: 10px;
   margin-bottom: 15px;
 }
 
 .countryInfo div {
   margin: 0%;
   margin-right: 15px;
+  padding: 10px;
+  border-radius: 8px;
   background-color: black;
+  min-width: 200px;
+  /*max-height: 200px;
+  width: 250px;*/
 }
+/*
+.countryInfo div img {
+  max-height: 200px;
+  max-width: 250px;
+
+} */
+
+.countryInfo div h1, .countryInfo div h3 {
+  /* font-size: 1rem; */
+ 
+}
+
 
 .countryTableDiv {
   overflow-y: scroll;
   height: 800px;
-  width: 1500px;
+  width: 1400px;
   text-align: left;
+  background-color: black;
+  padding: 10px 15px;
+  border-radius: 8px;
 }
 
 .filtersContainer {
@@ -30,7 +50,7 @@ body {
 }
 
 .filtersContainer input{
-  margin-left: 50px; 
+  margin-left: 45px; 
 }
 
 .filtersContainer label {
@@ -38,17 +58,38 @@ body {
 }
 
 .filtersContainer .search {
-  margin-left: 0px; 
+  margin: 5px 0px 0px 5px; 
+  height: 25px;
+  width: 200px;
 }
 
-.countryTable td {
+.countryTable {
+  border: none; 
+  border-collapse: collapse;
+
+}
+
+.countryTable td, .countryTable th {
   max-width: 222px; 
-  /*padding: 5px;*/
+  min-width: 105px;
+  padding: 8px 5px 8px 8px;
 }
 
-.countryTable tr {
+.countryTable th {
+  background-color: black;
+}
+
+.countryTable tr:nth-child(even) {
+  background-color: #1f2e46; 
+}
+
+.countryTable tr:nth-child(odd) {
+  background-color: #21395e; 
+}
+
+.countryTable tr:nth-child(odd):hover, .countryTable tr:nth-child(even):hover {
   cursor: pointer;
-  
+  background-color: #67707d;
 }
 
 
