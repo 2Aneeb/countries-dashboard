@@ -91,17 +91,17 @@ function CountryTable({list}) {
                 <thead>
                     <tr>
                         <th>County Name</th>
-                        <th>Official Name</th>
-                        <th>Sub Region</th>
+                        {/*< <th>Official Name</th>
+                        <th>Sub Region</th>*/}
                         <th>Area (km²)</th>
                         <th>Population</th>
                         {/*<th>Lat/Long</th>*/}
                         <th>ISO Code</th>
-                        {/*<th>TLD</th>*/}
+                        {/*<th>TLD</th>
                         <th>Landlocked</th>
                         {/*<th>Borders</th>*/}
                         <th>Langages</th>
-                        <th>Google Maps</th>
+                        <th>Details Google Maps</th>
 
                     </tr>
 
@@ -110,13 +110,13 @@ function CountryTable({list}) {
                     {filteredList.length > 0 ? filteredList.map((country) => (
                         <tr key={country.cca2}>
                             <td> {country.name.common}</td>
-                            <td className="table-cell"> {country.name.official}</td>
-                            <td> {country.subregion}</td>
+                             {/*<td className="table-cell"> {country.name.official}</td>
+                            <td> {country.subregion}</td>*/}
                             <td> {country.area.toLocaleString()}</td>
                             <td> {country.population.toLocaleString()}</td>
                             {/*<td> {country.latlng.join(', ')}</td>*/}
                             <td> {country.cca2}</td>
-                            {/*<td> {country.tld}</td>*/}
+                            {/*<td> {country.tld}</td>
                             <td> {country.landlocked ? 'Yes' : 'No'}</td>
                             {/*<td> {country.borders}</td>*/}
                             <td> {country.languages ? Object.values(country.languages).join(', ') : 'N/A'}</td>

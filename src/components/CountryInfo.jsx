@@ -1,5 +1,6 @@
-import React from "react";
-import { useState, useEffect } from "react";
+import React, { Component, useEffect, useState } from "react";
+import {LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip, Label} from "recharts";
+import CountriesChart from "./CountriesChart";
 
 
 function CountryInfo({list}) {
@@ -31,26 +32,20 @@ function CountryInfo({list}) {
     const populations = list.map(country => country.population);
     const highestPopulation = Math.max(...populations);
     const lowestPopulation = Math.min(...populations);
-    
+
     return (
         <div className='countryInfo'>
             <div>
-                <h4>Total Countries: {totalCountries}</h4>
-                <h4>Total Landlocked Countries: {totalLandlocked}</h4>
-                <h4>Total English Speaking Countries: {totalEnglishSpeaking}</h4>
+                <CountriesChart list={list}/>
             </div>
-            <div>
-                <h4>Average Population: {averagePopulation.toLocaleString()}</h4>
-                <h4>Average Population of Landlocked Countries: <br></br> {averageLandlockedPopulation.toLocaleString()}</h4>
-                <h4>Highest Population: {highestPopulation.toLocaleString()}</h4>
-                <h4>Lowest Population: {lowestPopulation}</h4>
-            </div>
+
+           
+         {/*    
+         
             <div>
                 <h3>Random Flag: {country.name.common}</h3>
                 <img src={country.flags.png} alt={`Flag of ${country.name.common}`} />
             </div>
-           
-         {/*    
             <div><h1>{country.name.common}</h1><br></br><h3>Capital:<br></br>{country.capital}</h3></div>
             <div>
                 <u>Continent(s)</u>: {country.continents} <br/><u>Population</u>:{country.population.toLocaleString()}<br></br>

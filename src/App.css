@@ -10,6 +10,7 @@ body {
   font-size: larger;
   margin-top: 10px;
   margin-bottom: 15px;
+  
 }
 
 .countryInfo div {
@@ -34,7 +35,13 @@ body {
   /* font-size: 1rem; */
  
 }
-
+.countryCharts {
+  display: flex;
+  overflow-x: scroll;
+}
+.countryCharts div {
+  margin-right: -1em;
+}
 
 .countryTableDiv {
   overflow-y: scroll;
@@ -89,7 +96,6 @@ body {
 }
 
 .countryTable tr:nth-child(odd):hover, .countryTable tr:nth-child(even):hover {
-  cursor: pointer;
   background-color: #67707d;
 }
 
