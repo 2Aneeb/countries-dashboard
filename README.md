@@ -2,7 +2,7 @@
 
 Submitted by: **Aneeb Zulfiqar**
 
-This web app: **Search information about countries around the world**
+This web app: **Search information about countries from around the world**
 
 Time spent: **6** hours spent in total
 
@@ -19,12 +19,8 @@ The following **required** functionality is completed:
 
 The following **optional** features are implemented:
 
-- [ ] The site's customized dashboard contains more content that explains what is interesting about the data
+- [X] The site's customized dashboard contains more content that explains what is interesting about the data
 - [ ] The site allows users to toggle between different data visualizations
-
-The following **additional** features are implemented:
-
-* [ ] List anything else that you added to improve the site's functionality!
 
 ## Video Walkthrough
 
@@ -39,9 +35,6 @@ GIF created with ...
 [ScreenToGif](https://www.screentogif.com/) for Windows
 [peek](https://github.com/phw/peek) for Linux. -->
 
-## Notes
-
-Describe any challenges encountered while building the app.
 
 ## License
 

@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import { BarChart, Bar, Rectangle, XAxis, YAxis, Tooltip } from "recharts";
 
 const CountriesChart = ({ list }) => {
-    const [countriesData, setCountriesData] = useState([]);
-
+  
     const continents = [
         { name: "Asia", code: "As" },
         { name: "North America", code: "NA" },
