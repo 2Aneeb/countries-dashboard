@@ -1,10 +1,10 @@
-# Web Development Project 5 - *World Countries Dash*
+# Web Development Project 6 - *World Countries Dash*
 
 Submitted by: **Aneeb Zulfiqar**
 
 This web app: **Search information about countries from around the world**
 
-Time spent: **6** hours spent in total
+Time spent: **7** hours spent in total
 
 ## Required Features
 
@@ -24,16 +24,12 @@ The following **optional** features are implemented:
 
 ## Video Walkthrough
 
-Here's a walkthrough of implemented user stories:
+Here's a walkthrough of implemented required features:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://github.com/2Aneeb/countries-dashboard/blob/main/src/assets/web102.gif.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
-<!-- Replace this with whatever GIF tool you used! -->
-GIF created with ...  
-<!-- Recommended tools:
-[Kap](https://getkap.co/) for macOS
-[ScreenToGif](https://www.screentogif.com/) for Windows
-[peek](https://github.com/phw/peek) for Linux. -->
+GIF created with ScreenToGif  
+
 
 
 ## License
