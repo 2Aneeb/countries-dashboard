@@ -1,5 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 function CountryTable({list}) {
     const [filteredList, setFilteredList] = useState([]);
@@ -101,7 +102,7 @@ function CountryTable({list}) {
                         <th>Landlocked</th>
                         {/*<th>Borders</th>*/}
                         <th>Langages</th>
-                        <th>Details Google Maps</th>
+                        <th>Details</th>
 
                     </tr>
 
@@ -118,9 +119,20 @@ function CountryTable({list}) {
                             <td> {country.cca2}</td>
                             {/*<td> {country.tld}</td>
                             <td> {country.landlocked ? 'Yes' : 'No'}</td>
-                            {/*<td> {country.borders}</td>*/}
+                            {/*<td> {country.borders}</td>
+                            {country.maps.googleMaps ? <a href={country.maps.googleMaps} target="_blank">View {country.cca2}</a> : 'N/A'}*/}
                             <td> {country.languages ? Object.values(country.languages).join(', ') : 'N/A'}</td>
-                            <td> {country.maps.googleMaps ? <a href={country.maps.googleMaps} target="_blank">View {country.cca2}</a> : 'N/A'}</td>
+                            <td> 
+                                  
+                                    <Link
+                                    style={{ color: "White" }}
+                                    to={`/countryDetails/${country.cca2}`}
+                                    key={country.cca2}
+                                    >
+                                     View Details
+                                    </Link>
+                            
+                            </td>
         
                         </tr>
                     )) : list.map((country) => (
@@ -136,8 +148,17 @@ function CountryTable({list}) {
                             <td> {country.landlocked ? 'Yes' : 'No'}</td>
                             {/*<td> {country.borders}</td>*/}
                             <td> {country.languages ? Object.values(country.languages).join(', ') : 'N/A'}</td>
-                            <td> {country.maps.googleMaps ? <a href={country.maps.googleMaps} target="_blank">View {country.cca2}</a> : 'N/A'}</td>
-        
+                            <td> 
+                                                            
+                                <Link
+                                style={{ color: "White" }}
+                                to={`/countryDetails/${country.cca2}`}
+                                key={country.cca2}
+                                >
+                                 View Details
+                                </Link>
+                        
+                        </td>
                         </tr>
                     ))}
                 </tbody>

@@ -25,7 +25,6 @@ function App() {
   if (list.length > 0) {
     console.log(list[0].name.common);
   }
-
   
   return (
     <div>

@@ -38,6 +38,7 @@ body {
 .countryCharts {
   display: flex;
   overflow-x: scroll;
+
 }
 .countryCharts div {
   margin-right: -1em;
@@ -74,7 +75,7 @@ body {
 .countryTable {
   border: none; 
   border-collapse: collapse;
-
+  width: 90%;
 }
 
 .countryTable td, .countryTable th {
@@ -101,5 +102,24 @@ body {
 
 
 
+.home-link 
+{
+  list-style: none;
+  
+}
+table {
+  border-collapse: collapse;
+  margin: 0 auto; 
+  width: 42%; 
+}
 
+th, td {
+  border: 1px solid #000000;
+  padding: 8px;
+  text-align: left;
+}
 
+th {
+  background-color: #181717;
+  color: white; 
+}

@@ -1,5 +1,5 @@
 import React from "react";
-import CountryDetails from "./components/CountryDetail";
+import CountryDetails from "../components/CountryDetails";
 
 
 const DetailView = () => {
